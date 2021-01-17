@@ -11,6 +11,7 @@ const AddCategory = ( { setCategory } ) => {
     e.preventDefault();
 
     setCategory( cats => [ inputValue, ...cats ] );
+    setInputValue('');
   };
 
   return (
