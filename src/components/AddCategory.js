@@ -6,14 +6,17 @@ const AddCategory = ( { setCategory } ) => {
 
   const handleInputChange = ( e ) => {
     setInputValue(e.target.value);
-    console.log( 'handleInputChange llamado' );
   };
 
   const handleSubmit = ( e ) => {
     e.preventDefault();
 
-    setCategory( cats => [ inputValue, ...cats ] );
-    setInputValue('');
+    console.log('handleSubmit', inputValue)
+
+    if ( inputValue.trim().length > 2 ) {
+      setCategory( cats => [ inputValue, ...cats ] );
+      setInputValue('');
+    }
   };
 
   return (
