@@ -6,6 +6,7 @@ const AddCategory = ( { setCategory } ) => {
 
   const handleInputChange = ( e ) => {
     setInputValue(e.target.value);
+    console.log( 'handleInputChange llamado' );
   };
 
   const handleSubmit = ( e ) => {
@@ -17,6 +18,7 @@ const AddCategory = ( { setCategory } ) => {
 
   return (
     <form onSubmit={ handleSubmit }>
+      <p> { inputValue } </p>
       <input
         type="text"
         placeholder="Busca algo..."
